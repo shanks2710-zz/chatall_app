@@ -6,7 +6,7 @@ import { Event } from '../model/event';
 
 import * as socketIo from 'socket.io-client';
 
-const SERVER_URL_AWS = 'http://serverapp.default.svc.cluster.local:80';
+const SERVER_URL_AWS = 'http://a6942d2d9232b407682e7bfc8358c20f-1425548121.us-west-2.elb.amazonaws.com';
 const SERVER_URL_DOCKER = 'http://192.168.99.100:4965';
 const SERVER_URL_MINIKUBE = 'http://192.168.99.101:31425';
 const SERVER_URL_LOCAL = 'http://localhost:8080';

@@ -13,7 +13,7 @@ spec:
         app: clientapp
     spec:
       containers:
-        - image: "sharmashas/chatclientapp_test"
+        - image: "sharmashas/chatclientapp"
           imagePullPolicy: Always
           name: clientapp
           ports:
