@@ -1,0 +1,28 @@
+<div class="row">
+<h2 class="dialog-title" mat-dialog-title>{{ 'Dialog Title' | translate:params }}</h2>
+
+<button mat-icon-button mat-dialog-title [matMenuTriggerFor]="menu" class="button-globe" tabindex="-1">
+  <mat-icon>language</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="changeLang('en')"><img alt="flag" src="../../../assets/flags/en.png"> English</button>
+</mat-menu>
+</div>
+
+<mat-dialog-content class="dialog-content">
+  <mat-form-field>
+    <input matInput name="username" placeholder="{{'User-ID' | translate}}"
+          (keyup.enter)="onConfirm()" [formControl]="usernameFormControl" required>
+    <mat-error translate>FieldRequired</mat-error>
+    <mat-hint translate>Please type your User-Id</mat-hint>
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions *ngIf="params?.typeDialog === 'new-user'" [attr.align]="'end'">
+  <button mat-raised-button color="primary" mat-dialog-close (click)="onConfirm()" [disabled]="usernameFormControl.hasError('required')">Chat!</button>
+</mat-dialog-actions>
+
+<mat-dialog-actions *ngIf="params?.typeDialog === 'edit-user'" [attr.align]="'end'">
+  <button mat-button mat-dialog-close color="secondary">Close</button>
+  <button mat-raised-button color="primary" mat-dialog-close (click)="onConfirm()">Confirm</button>
+</mat-dialog-actions>

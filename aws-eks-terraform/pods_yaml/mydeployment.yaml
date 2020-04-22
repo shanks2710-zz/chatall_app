@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: serverapp
+spec:
+  selector:
+    matchLabels:
+      app: serverapp
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: serverapp
+    spec:
+      containers:
+        - image: "sharmashas/chatserverapp"
+          imagePullPolicy: Always
+          name: serverapp
+          ports:
+            - containerPort: 8080
