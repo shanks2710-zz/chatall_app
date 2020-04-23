@@ -6,7 +6,9 @@ This is the server for the Chat-All Application
 ## Build
 ### Using Visual Studio Code
 npm install -g gulp-cli
+
 npm install
+
 gulp build
 
 ### Using Docker
