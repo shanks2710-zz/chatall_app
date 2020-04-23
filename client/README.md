@@ -17,4 +17,4 @@ ng serve
 Navigate to URL: [http://localhost:4200](http://localhost:4200/)
 ### Using Docker
 winpty docker run --name chatclientapp --rm -it -p 90:80 <your-Dockerhub-account>/chatclientapp
-navigate to URL: [http://<your-docker-machine-ip>:4200](http://<your-docker-machine-ip>:4200/)
+navigate to URL: http://<your-docker-machine-ip>:4200(http://<your-docker-machine-ip>:4200/)
