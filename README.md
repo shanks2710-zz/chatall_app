@@ -5,8 +5,8 @@ Includes:
 - Front-End application based on Angular framework
 - Backend application based on ExpressJS, node.js and Firebase as in-memory DB
 
-## Prereuisites
-A machine configured with:
+## Prerequisites
+A Windows machine configured with:
 
 1) AWS account keys
 2) git-bash
